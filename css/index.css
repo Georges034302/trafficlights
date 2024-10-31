@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.traffic-light {
+    width: 100px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; /* Center the circles */
+    position: relative; /* For positioning of the pole */
+    margin-bottom: 0; /* No space for the pole */
+}
+
+.pole {
+    width: 20px; /* Width of the vertical part */
+    height: 910px; /* Match the height of the traffic light */
+    background-color: black;
+    position: absolute;
+    bottom: -300px; /* Extend the pole below the traffic light */
+    left: 50%; /* Center the pole */
+    transform: translateX(-50%); /* Center the pole */
+}
+
+.pole::after {
+    content: '';
+    width: 100px; /* Width of the horizontal part */
+    height: 20px; /* Height of the horizontal part */
+    background-color: black;
+    position: absolute;
+    top: -20px; /* Position above the vertical pole */
+    left: -40px; /* Center the horizontal part */
+}
+
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.3; /* More dull when off */
+    transition: opacity 0.5s, background-color 0.5s; /* For color change */
+}
+
+.light.red {
+    background-color: red;
+}
+
+.light.orange {
+    background-color: orange;
+}
+
+.light.green {
+    background-color: green;
+}
+
+.light.red.active {
+    opacity: 1; /* Bright when active */
+}
+
+.light.orange.active {
+    opacity: 1; /* Bright when active */
+}
+
+.light.green.active {
+    opacity: 1; /* Brighter when active */
+    filter: brightness(2); /* Increase brightness for green */
+}
