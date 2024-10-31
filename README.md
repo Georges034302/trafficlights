@@ -1,4 +1,4 @@
-## [https://georges034302.github.io/trafficlights/] trafficlights
+## <a href="https://georges034302.github.io/trafficlights/"> trafficlights </a>
 Animated Traffic Lights
 
 ###
